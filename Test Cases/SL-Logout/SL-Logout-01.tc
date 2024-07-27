@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Success logout from website</description>
+   <name>SL-Logout-01</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c027dfc1-f3e4-4072-9f07-5fe78b3bf335</testCaseGuid>
+</TestCaseEntity>

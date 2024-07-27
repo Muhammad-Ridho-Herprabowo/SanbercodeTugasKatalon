@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Login using invalid username</description>
+   <name>SL-Login-02</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>09b7ae19-4772-4c69-a2ed-7d9aba46f26e</testCaseGuid>
+</TestCaseEntity>

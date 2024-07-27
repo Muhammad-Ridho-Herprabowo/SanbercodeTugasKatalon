@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Success login into website</description>
+   <name>SL-Login-01</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c5eccc91-7d26-4141-85c0-28649b2eb42c</testCaseGuid>
+</TestCaseEntity>

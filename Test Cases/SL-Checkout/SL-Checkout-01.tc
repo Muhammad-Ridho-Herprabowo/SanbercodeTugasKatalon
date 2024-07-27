@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Success Checkout 1 Item</description>
+   <name>SL-Checkout-01</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>60558cde-9b52-47f2-b58c-d08368b06662</testCaseGuid>
+</TestCaseEntity>

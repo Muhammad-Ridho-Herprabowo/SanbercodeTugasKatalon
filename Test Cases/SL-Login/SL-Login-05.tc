@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Cannot login due to empty field</description>
+   <name>SL-Login-05</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4f7d1ad7-84b6-4448-9ff7-7dca42f01b65</testCaseGuid>
+</TestCaseEntity>

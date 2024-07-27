@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Cannot done checkout due to empty chart</description>
+   <name>SL-Checkout-03</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c0c32d71-9fa4-4360-825a-70b30be2e6ac</testCaseGuid>
+</TestCaseEntity>
