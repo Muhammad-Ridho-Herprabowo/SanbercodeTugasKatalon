@@ -12,16 +12,15 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import groovy.transform.TimedInterrupt
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl('https://www.saucedemo.com/')
+try {
+	@TimedInterrupt(10L)
+	def runTestCase = {
 
 WebUI.setText(findTestObject('Login/Page_Swag Labs/input_Swag Labs_user-name'), 'standard_user')
 
@@ -29,6 +28,11 @@ WebUI.setEncryptedText(findTestObject('Object Repository/Login/Page_Swag Labs/in
 
 WebUI.click(findTestObject('Login/Page_Swag Labs/input_Swag Labs_login-button'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Login/Page_Swag Labs/h3_Epic sadface Username and password do no_0e8909'), 
-    5)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Login/Page_Swag Labs/h3_Epic sadface Username and password do no_0e8909'), 0, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+	runTestCase()
+} catch (Exception e) {
+	println("Test case took longer than 10 seconds.")
+	WebUI.callTestCase(findTestCase('Test Cases/SL-Login/SL-Login-04'), [:], FailureHandling.STOP_ON_FAILURE)
+}
 

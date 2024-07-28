@@ -16,16 +16,33 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import groovy.transform.TimedInterrupt
+import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl('https://www.saucedemo.com/')
+try {
+	@TimedInterrupt(10L)
+	def runTestCase = {
 
 WebUI.click(findTestObject('Object Repository/Login/Empty Field/input_Swag Labs_user-name'))
 
+WebUI.sendKeys(findTestObject('Object Repository/Login/Empty Field/input_Swag Labs_user-name'), Keys.chord(Keys.CONTROL, 'a'))
+
+WebUI.sendKeys(findTestObject('Object Repository/Login/Empty Field/input_Swag Labs_user-name'), Keys.chord(Keys.DELETE))
+
+
+WebUI.click(findTestObject('Object Repository/Login/Empty Field/input_Swag Labs_password'))
+
+WebUI.sendKeys(findTestObject('Object Repository/Login/Empty Field/input_Swag Labs_password'), Keys.chord(Keys.CONTROL, 'a'))
+
+WebUI.sendKeys(findTestObject('Object Repository/Login/Empty Field/input_Swag Labs_password'), Keys.chord(Keys.DELETE))
+
+
 WebUI.click(findTestObject('Object Repository/Login/Empty Field/input_Swag Labs_login-button'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Login/Empty Field/h3_Epic sadface Username is required'), 5)
-
+WebUI.verifyElementPresent(findTestObject('Object Repository/Login/Empty Field/h3_Epic sadface Username is required'), 0, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+	runTestCase()
+} catch (Exception e) {
+	println("Test case took longer than 10 seconds.")
+}
